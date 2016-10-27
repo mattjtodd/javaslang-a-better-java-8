@@ -48,7 +48,7 @@ class Pbkdf2Controller {
      * @return the encoded response
      */
     @RequestMapping(value = "/hash", method = RequestMethod.GET)
-    public String hash(@RequestParam char[] text, @RequestParam SecretKey secretKey) {
+    public char[] hash(@RequestParam char[] text, @RequestParam SecretKey secretKey) {
 
         DeferredResult<ResponseEntity<?>> deferredResult = new DeferredResult<>();
 
@@ -58,7 +58,7 @@ class Pbkdf2Controller {
 
         // handle the processing asynchronously
 
-        return "deferredResult";
+        return "deferredResult".toCharArray();
     }
 
     /**
