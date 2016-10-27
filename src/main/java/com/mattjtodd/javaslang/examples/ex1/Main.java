@@ -22,6 +22,10 @@ import java.io.IOException;
  */
 public class Main {
 
+    public static void main(String[] args) {
+        // start with an inifinte Stream
+    }
+
     /**
      * The process each of the service needs to complete.
      *
